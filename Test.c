@@ -1,7 +1,10 @@
 #include <stdio.h>
  
 int main(void) {
-	/* 名前の出力 */
-	printf("Hello World \n");
+	FILE *fp;
+
+	fp = fopen("file.txt", "a");
+	fprintf(fp, "Hello World\n");
+	fclose(fp);
 	return 0;
 }
